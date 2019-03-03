@@ -17,8 +17,11 @@ class CustomerSearchInteractorTests: XCTestCase {
     }
 
     func testFetchCustomers() {
-        let customers = interactor.fetchCustomersFromFile()
+        let customers = interactor.fetchCustomersFromFile("Customers")
         XCTAssertTrue(customers.count > 0, "Failed to load customers")
+
+        // wrong fileName
+        XCTAssertEqual(interactor.fetchCustomersFromFile("TestFile").count, 0)
     }
 
     func testParsingCustomers() {

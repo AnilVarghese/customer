@@ -18,13 +18,26 @@ class CustomerSearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Customers"
+        navigationController?.navigationBar.prefersLargeTitles = true
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchResultsUpdater = self
+        searchController.searchBar.placeholder = "Search by disance(Km)"
         searchController.searchBar.text = "100"
         searchController.searchBar.keyboardType = .numberPad
         searchController.hidesNavigationBarDuringPresentation = false
         navigationItem.searchController = searchController
         definesPresentationContext = true
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.hidesSearchBarWhenScrolling = false
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationItem.hidesSearchBarWhenScrolling = true
     }
 }
 
