@@ -24,8 +24,11 @@ class CustomerSearchInteractor {
                 return []
         }
 
-        var customers = [Customer]()
+        return parse(dataString: dataString)
+    }
 
+    func parse(dataString: String) -> [Customer] {
+        var customers = [Customer]()
         dataString.components(separatedBy: "\n").forEach {
             if let json = $0.data(using: .utf8) {
                 let decoder = JSONDecoder()
@@ -34,7 +37,6 @@ class CustomerSearchInteractor {
                 }
             }
         }
-
         return customers
     }
 }
