@@ -13,6 +13,9 @@
 		ECC75640222BAC68008CC14A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC7563F222BAC68008CC14A /* Assets.xcassets */; };
 		ECC75643222BAC68008CC14A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC75641222BAC68008CC14A /* LaunchScreen.storyboard */; };
 		ECC7564E222BAC68008CC14A /* CustomerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC7564D222BAC68008CC14A /* CustomerTests.swift */; };
+		ECC7565B222BB281008CC14A /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC7565A222BB281008CC14A /* Customer.swift */; };
+		ECC7565D222BB2AF008CC14A /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC7565C222BB2AF008CC14A /* Coordinate.swift */; };
+		ECC7565F222BB31A008CC14A /* CoordinateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC7565E222BB31A008CC14A /* CoordinateTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		ECC75649222BAC68008CC14A /* CustomerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC7564D222BAC68008CC14A /* CustomerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTests.swift; sourceTree = "<group>"; };
 		ECC7564F222BAC68008CC14A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECC7565A222BB281008CC14A /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		ECC7565C222BB2AF008CC14A /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		ECC7565E222BB31A008CC14A /* CoordinateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,8 @@
 			children = (
 				ECC75638222BAC67008CC14A /* AppDelegate.swift */,
 				ECC7563A222BAC67008CC14A /* ViewController.swift */,
+				ECC75663222BB395008CC14A /* Search */,
+				ECC75660222BB362008CC14A /* Data */,
 				ECC7563C222BAC67008CC14A /* Main.storyboard */,
 				ECC7563F222BAC68008CC14A /* Assets.xcassets */,
 				ECC75641222BAC68008CC14A /* LaunchScreen.storyboard */,
@@ -91,9 +99,42 @@
 			isa = PBXGroup;
 			children = (
 				ECC7564D222BAC68008CC14A /* CustomerTests.swift */,
+				ECC7565E222BB31A008CC14A /* CoordinateTests.swift */,
 				ECC7564F222BAC68008CC14A /* Info.plist */,
 			);
 			path = CustomerTests;
+			sourceTree = "<group>";
+		};
+		ECC75659222BB266008CC14A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ECC7565A222BB281008CC14A /* Customer.swift */,
+				ECC7565C222BB2AF008CC14A /* Coordinate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ECC75660222BB362008CC14A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		ECC75661222BB36E008CC14A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ECC75663222BB395008CC14A /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				ECC75659222BB266008CC14A /* Model */,
+				ECC75661222BB36E008CC14A /* Controllers */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +238,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECC7565B222BB281008CC14A /* Customer.swift in Sources */,
 				ECC7563B222BAC67008CC14A /* ViewController.swift in Sources */,
 				ECC75639222BAC67008CC14A /* AppDelegate.swift in Sources */,
+				ECC7565D222BB2AF008CC14A /* Coordinate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECC7564E222BAC68008CC14A /* CustomerTests.swift in Sources */,
+				ECC7565F222BB31A008CC14A /* CoordinateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
